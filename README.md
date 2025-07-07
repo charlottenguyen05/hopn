@@ -16,19 +16,17 @@ A modern web application built with Next.js 15 that showcases experiences and pr
 - ✅ **Responsive Design** - Mobile-first approach with Tailwind CSS
 - ✅ **Real-time Search** - Instant filtering as you type
 - ✅ **Category Filtering** - Dropdown-based category selection
-- ✅ **Pagination** - 10 items per page with smart navigation
+- ✅ **Pagination** - 8 items per page with smart navigation
 - ✅ **Form Validation** - Real-time client-side validation
 - ✅ **Booking System** - Complete booking flow with confirmation
 - ✅ **TypeScript** - Full type safety throughout the application
-- ✅ **Modern UI** - Glass-morphism effects and smooth animations
-- ✅ **SEO Optimized** - Next.js 15 app router with proper meta tags
 
 ## 🛠️ Tech Stack
 
 - **Framework:** Next.js 15 (App Router)
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS
-- **Icons:** Heroicons, Lucide React
+- **Icons:** Lucide React
 - **Data Source:** Local JSON file
 - **Deployment:** Vercel-ready
 
@@ -171,22 +169,6 @@ hopn/
 - **Date:** Required, cannot be in the past
 - **Real-time Feedback:** Errors appear/disappear as user types
 
-## 🎨 Design Features
-
-### Visual Elements
-- **Glass-morphism:** Backdrop blur effects throughout
-- **Gradient Backgrounds:** Modern color schemes
-- **Hover Animations:** Interactive element feedback
-- **Responsive Typography:** Scalable text hierarchy
-- **Card-based Layout:** Consistent component design
-
-### User Experience
-- **Loading States:** Skeleton components during data fetching
-- **Error Handling:** Graceful failure management
-- **Smooth Transitions:** CSS animations for better feel
-- **Mobile-first:** Responsive design approach
-- **Accessibility:** Proper ARIA labels and keyboard navigation
-
 ## 🚀 Deployment
 
 ### Vercel (Recommended)
@@ -194,13 +176,6 @@ hopn/
 npm run build
 vercel --prod
 ```
-
-### Other Platforms
-The application is built with standard Next.js 15, making it compatible with:
-- Netlify
-- AWS Amplify
-- Railway
-- Heroku
 
 ## 🔍 Data Structure
 
@@ -254,12 +229,6 @@ interface BookingData {
 - [ ] About page displays company information
 - [ ] 404 page handles invalid routes
 
-### Browser Support
-- Chrome 90+
-- Firefox 88+
-- Safari 14+
-- Edge 90+
-
 ## 📝 Development Notes
 
 ### Next.js 15 Features Used
@@ -275,22 +244,7 @@ interface BookingData {
 - **Lazy Loading:** Components loaded on demand
 - **Static Generation:** Pre-built pages where possible
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 📞 Support
-
-For support, email support@hopn.com or join our community Discord.
-
----
-
-**HOPn** - Hop into Innovation, Hub of Projects & Networks, Higher Order Prototyping Network
