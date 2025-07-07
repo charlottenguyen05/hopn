@@ -1,6 +1,6 @@
-# HOPn - Hub of Projects & Networks
+# HOPn Experiences Project
 
-A modern web application built with Next.js 15 that showcases experiences and provides a seamless booking system. HOPn represents "Hop into Innovation," "Hub of Projects & Networks," and "Higher Order Prototyping Network."
+A modern web application built with Next.js 15 that showcases experiences and provides a seamless booking system.
 
 ## 🚀 Features
 
@@ -142,8 +142,6 @@ hopn/
 ### 5. About Page (/about)
 - **Company Information:** Mission, vision, and core values
 - **Service Areas:** AI, FinTech, Automation focus
-- **Educational Programs:** Bootcamps, workshops, hackathons
-- **Visual Design:** Modern layout with engaging graphics
 
 ### 6. Custom 404 Page
 - **User-friendly Design:** Clear error message
@@ -189,7 +187,7 @@ interface ExperienceType {
   long_description: string;
   image: string;
   category: string;
-  price?: number;
+  price: number;
   host: {
     name: string;
     avatar: string;
@@ -204,7 +202,7 @@ interface BookingData {
     title: string;
     slug: string;
     category: string;
-    price?: number;
+    price: number;
   };
   customerData: {
     name: string;
