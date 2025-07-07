@@ -1,36 +1,296 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# HOPn - Hub of Projects & Networks
 
-## Getting Started
+A modern web application built with Next.js 15 that showcases experiences and provides a seamless booking system. HOPn represents "Hop into Innovation," "Hub of Projects & Networks," and "Higher Order Prototyping Network."
 
-First, run the development server:
+## 🚀 Features
+
+### Core Pages
+- **Homepage (/)** - Hero section with featured experiences grid
+- **Experiences Listing (/experiences)** - Searchable and filterable experience catalog
+- **Experience Details (/experience/[slug])** - Detailed view with booking capability
+- **Booking System (/booking/[slug])** - Form-based booking with confirmation
+- **About Page (/about)** - Company information and mission
+- **Custom 404 Page** - User-friendly error handling
+
+### Key Features
+- ✅ **Responsive Design** - Mobile-first approach with Tailwind CSS
+- ✅ **Real-time Search** - Instant filtering as you type
+- ✅ **Category Filtering** - Dropdown-based category selection
+- ✅ **Pagination** - 10 items per page with smart navigation
+- ✅ **Form Validation** - Real-time client-side validation
+- ✅ **Booking System** - Complete booking flow with confirmation
+- ✅ **TypeScript** - Full type safety throughout the application
+- ✅ **Modern UI** - Glass-morphism effects and smooth animations
+- ✅ **SEO Optimized** - Next.js 15 app router with proper meta tags
+
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js 15 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Icons:** Heroicons, Lucide React
+- **Data Source:** Local JSON file
+- **Deployment:** Vercel-ready
+
+## 📦 Installation & Setup
+
+### Prerequisites
+- Node.js 18.0 or higher
+- npm or yarn package manager
+
+### Getting Started
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd hopn
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Run the development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+### Build for Production
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📁 Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+hopn/
+├── src/
+│   ├── app/
+│   │   ├── (routes)/
+│   │   │   ├── page.tsx                 # Homepage
+│   │   │   ├── about/
+│   │   │   │   └── page.tsx             # About page
+│   │   │   ├── experiences/
+│   │   │   │   ├── page.tsx             # Experiences listing
+│   │   │   │   ├── loading.tsx          # Loading skeleton
+│   │   │   │   └── components/          # Listing components
+│   │   │   ├── experience/
+│   │   │   │   └── [slug]/
+│   │   │   │       ├── page.tsx         # Experience details
+│   │   │   │       └── loading.tsx      # Loading state
+│   │   │   ├── booking/
+│   │   │   │   └── [slug]/
+│   │   │   │       ├── page.tsx         # Booking page
+│   │   │   │       ├── components/      # Booking components
+│   │   │   │       └── hooks/           # Custom hooks
+│   │   │   └── not-found.tsx            # 404 page
+│   │   ├── globals.css                  # Global styles
+│   │   └── layout.tsx                   # Root layout
+│   ├── components/                      # Reusable components
+│   │   ├── BackNavigation.tsx
+│   │   ├── ExperienceCard.tsx
+│   │   ├── Hero.tsx
+│   │   ├── LoadingSpinner.tsx
+│   │   ├── NavBar.tsx
+│   │   ├── SearchBar.tsx
+│   │   └── CategoryFilter.tsx
+│   └── types/
+│       └── Type.ts                      # TypeScript definitions
+├── data.json                           # Experience data
+├── public/                             # Static assets
+└── package.json
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🎯 Implementation Details
 
-## Learn More
+### 1. Homepage (/)
+- **Hero Section:** Engaging introduction with call-to-action
+- **Featured Experiences:** Grid layout showcasing 6 featured experiences
+- **Navigation:** Smooth routing to experiences listing page
+- **Responsive Design:** Mobile-optimized layout
 
-To learn more about Next.js, take a look at the following resources:
+### 2. Experiences Listing (/experiences)
+- **Data Source:** Local JSON file with 50+ experiences
+- **Search Functionality:** Real-time filtering by title and description
+- **Category Filters:** Dropdown selection for experience categories
+- **Pagination:** 10 items per page with intelligent navigation
+- **Loading States:** Skeleton components for better UX
+- **Responsive Grid:** 1-4 columns based on screen size
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 3. Experience Details (/experience/[slug])
+- **Dynamic Routing:** Slug-based URL structure
+- **Comprehensive Display:** Title, image, description, price, host info
+- **Booking Integration:** Direct navigation to booking page
+- **Error Handling:** 404 for invalid slugs
+- **Back Navigation:** Easy return to listing page
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 4. Booking System (/booking/[slug])
+- **Form Components:** Reusable form inputs with validation
+- **Real-time Validation:** Instant feedback as users type
+- **Custom Hook:** `useBookingForm` for form state management
+- **Confirmation Screen:** Booking summary with success message
+- **Console Logging:** Complete booking data logged for debugging
 
-## Deploy on Vercel
+### 5. About Page (/about)
+- **Company Information:** Mission, vision, and core values
+- **Service Areas:** AI, FinTech, Automation focus
+- **Educational Programs:** Bootcamps, workshops, hackathons
+- **Visual Design:** Modern layout with engaging graphics
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 6. Custom 404 Page
+- **User-friendly Design:** Clear error message
+- **Navigation Options:** Links back to main sections
+- **Consistent Styling:** Matches overall design theme
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔧 Key Components
+
+### Custom Hooks
+- **`useBookingForm`** - Form state management and validation
+- **`useExperiences`** - Experience data fetching and filtering
+
+### Reusable Components
+- **`ExperienceCard`** - Experience display component
+- **`SearchBar`** - Real-time search input
+- **`CategoryFilter`** - Dropdown category selection
+- **`FormInput`** - Validated form input component
+- **`LoadingSpinner`** - Loading state indicator
+
+### Form Validation
+- **Name:** Required, minimum 2 characters
+- **Email:** Required, valid email format
+- **Date:** Required, cannot be in the past
+- **Real-time Feedback:** Errors appear/disappear as user types
+
+## 🎨 Design Features
+
+### Visual Elements
+- **Glass-morphism:** Backdrop blur effects throughout
+- **Gradient Backgrounds:** Modern color schemes
+- **Hover Animations:** Interactive element feedback
+- **Responsive Typography:** Scalable text hierarchy
+- **Card-based Layout:** Consistent component design
+
+### User Experience
+- **Loading States:** Skeleton components during data fetching
+- **Error Handling:** Graceful failure management
+- **Smooth Transitions:** CSS animations for better feel
+- **Mobile-first:** Responsive design approach
+- **Accessibility:** Proper ARIA labels and keyboard navigation
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
+```bash
+npm run build
+vercel --prod
+```
+
+### Other Platforms
+The application is built with standard Next.js 15, making it compatible with:
+- Netlify
+- AWS Amplify
+- Railway
+- Heroku
+
+## 🔍 Data Structure
+
+### Experience Object
+```typescript
+interface ExperienceType {
+  id: number;
+  slug: string;
+  title: string;
+  description: string;
+  long_description: string;
+  image: string;
+  category: string;
+  price?: number;
+  host: {
+    name: string;
+    avatar: string;
+  };
+}
+```
+
+### Booking Data
+```typescript
+interface BookingData {
+  experience: {
+    title: string;
+    slug: string;
+    category: string;
+    price?: number;
+  };
+  customerData: {
+    name: string;
+    email: string;
+    preferredDate: string;
+  };
+  submittedAt: string;
+  bookingId: string;
+}
+```
+
+## 🧪 Testing
+
+### Manual Testing Checklist
+- [ ] Homepage loads with featured experiences
+- [ ] Search functionality works in real-time
+- [ ] Category filtering updates results
+- [ ] Pagination navigates correctly
+- [ ] Experience details display properly
+- [ ] Booking form validates input
+- [ ] Confirmation screen shows booking summary
+- [ ] About page displays company information
+- [ ] 404 page handles invalid routes
+
+### Browser Support
+- Chrome 90+
+- Firefox 88+
+- Safari 14+
+- Edge 90+
+
+## 📝 Development Notes
+
+### Next.js 15 Features Used
+- **App Router:** Modern routing system
+- **Async Components:** Server-side rendering
+- **Dynamic Routes:** Slug-based navigation
+- **Loading UI:** Built-in loading states
+- **Error Handling:** Custom error boundaries
+
+### Performance Optimizations
+- **Image Optimization:** Next.js built-in optimization
+- **Code Splitting:** Automatic route-based splitting
+- **Lazy Loading:** Components loaded on demand
+- **Static Generation:** Pre-built pages where possible
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 📞 Support
+
+For support, email support@hopn.com or join our community Discord.
+
+---
+
+**HOPn** - Hop into Innovation, Hub of Projects & Networks, Higher Order Prototyping Network
